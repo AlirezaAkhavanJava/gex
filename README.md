@@ -14,4 +14,16 @@ is the entry point of the Java application.
 
 --- 
 
+GexApplication
+      │
+      │ receives args
+      ▼
+CommandParser
+      │
+      │ determines command
+      ▼
+"status"
+
+--- 
+
 

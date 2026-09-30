@@ -1,15 +1,19 @@
 package com.gex;
 
+import com.gex.cli.CommandParser;
+
 public class GexApplication {
 
   public static void main(String[] args) {
 
-    if (args.length == 0) {
+    CommandParser parser = new CommandParser();
+
+    String command = parser.parse(args);
+
+    if (command == null) {
       System.out.println("Gex");
       return;
     }
-
-    String command = args[0];
 
     System.out.println("Command: " + command);
   }
